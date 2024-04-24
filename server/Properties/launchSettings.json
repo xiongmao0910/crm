@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "locy-api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:1009;http://localhost:1099"
+    }
+  }
+}

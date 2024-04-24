@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+.img-fluid {
+    @apply w-full h-full object-cover;
+}
+
+/** ========== Layout ========== */
+/** Wrapper */
+.wrapper {
+    @apply flex flex-col-reverse sm:flex-row w-full h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white;
+}
+
+/** Sidebar */
+.sidebar {
+    @apply lg:w-64 overflow-y-auto border-t sm:border-t-0 sm:border-r border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4 py-1 sm:py-4 lg:py-6;
+}
+
+.sidebar-logo {
+    @apply hidden sm:block;
+}
+
+.sidebar-logo > * {
+    @apply w-12 aspect-square border border-gray-900 dark:border-white rounded-full bg-white;
+}
+
+.sidebar-list {
+    @apply flex sm:flex-col justify-center sm:justify-start gap-4 sm:gap-6;
+}
+
+.sidebar-link {
+    @apply p-3 rounded-lg flex items-center gap-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 hover:dark:text-white hover:bg-gray-300 hover:dark:bg-gray-600;
+}
+
+.sidebar-link.active {
+    @apply text-gray-900 dark:text-white bg-gray-200 dark:bg-gray-600;
+}
+
+.sidebar-link-icon {
+    @apply text-2xl;
+}
+
+.sidebar-link-text {
+    @apply hidden lg:block capitalize text-lg;
+}
+
+/** Main */
+.main {
+    @apply flex-1 flex flex-col relative overflow-auto;
+}
+
+.main > * {
+    @apply p-4 lg:p-6;
+}
+
+/** Header */
+.header {
+    @apply sticky top-0 left-0 right-0 w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white z-20;
+}
+
+.header-action {
+    @apply w-full flex justify-end items-center gap-2;
+}
+
+.header-theme,
+.header-notification {
+    @apply p-2 rounded-full hover:bg-gray-200 hover:dark:bg-gray-600 cursor-pointer;
+}
+
+/** Section */
+.section {
+    @apply flex-1;
+}
+
+.section-container {
+    @apply flex flex-col gap-6 overflow-hidden w-full h-full;
+}
+
+.section-title {
+    @apply text-2xl first-letter:uppercase font-semibold text-gray-700 dark:text-gray-200;
+}
+
+.section-subtitle {
+    @apply text-lg first-letter:uppercase font-semibold text-gray-600 dark:text-gray-300;
+}
+
+.section-table {
+    @apply w-full overflow-auto text-gray-900 dark:text-white;
+}
+
+.section-table > * {
+    @apply bg-white dark:bg-gray-900;
+}
+
+/** category */
+.category {
+    @apply md:flex;
+}
+
+.category > * {
+    @apply p-4 md:p-6;
+}
+
+.category-list {
+    @apply relative md:w-64 max-h-[45rem] overflow-auto no-scrollbar border-t sm:border-t-0 sm:border-r border-gray-300 dark:border-gray-600 flex flex-col space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-4 mb-4 md:mb-0;
+}
+
+.category-item {
+    @apply first-letter:uppercase px-4 py-3 text-gray-900 dark:text-white rounded-lg w-full;
+}
+
+.category-item:hover,
+.category-item.active {
+    @apply bg-gray-200 dark:bg-gray-600;
+}
+
+.category-input {
+    @apply sticky -top-4 md:-top-6 left-0 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white rounded-lg w-full border border-gray-300 dark:border-gray-600 outline-none;
+}
+
+/** Material React Table */
+.css-1tbggly,
+.css-10gei56,
+.css-apge8j-MuiTableRow-root {
+    @apply bg-white dark:bg-gray-900;
+}
+
+.main .css-hsi95o-MuiTableRow-root {
+    background-color: white !important;
+}
+
+.dark .main .css-hsi95o-MuiTableRow-root {
+    background-color: #111827 !important;
+}
+
+.css-20jxbc-MuiTableCell-root {
+    @apply bg-gray-900;
+}
+
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root,
+.css-1atu56z-MuiPaper-root {
+    @apply text-gray-900 dark:text-white;
+}
+
+.css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon,
+.css-i4bv87-MuiSvgIcon-root {
+    @apply fill-gray-900 dark:fill-white opacity-100;
+}
+
+.section-table th,
+.section-table td,
+.css-uqq6zz-MuiFormLabel-root-MuiInputLabel-root,
+.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input,
+.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+    @apply text-gray-900 dark:text-white !important;
+}
